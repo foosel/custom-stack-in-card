@@ -166,7 +166,7 @@ class VerticalStackInCard extends BaseStackInCard {
     return this._getHelperElement("vertical-stack", "hui-vertical-stack-card");
   }
 }
-customElements.define("vertical-stack-in-card", VerticalStackInCard);
+customElements.define("v-stack-in-card", VerticalStackInCard);
 
 /** Horizontal Stack Card */
 class HorizontalStackInCard extends BaseStackInCard {
@@ -175,7 +175,7 @@ class HorizontalStackInCard extends BaseStackInCard {
     return this._getHelperElement("horizontal-stack", "hui-horizontal-stack-card");
   }
 }
-customElements.define("horizontal-stack-in-card", HorizontalStackInCard);
+customElements.define("h-stack-in-card", HorizontalStackInCard);
 
 /** Grid Stack Card */
 class GridStackInCard extends BaseStackInCard {
@@ -194,13 +194,13 @@ class GridStackInCard extends BaseStackInCard {
     return this._getHelperElement("grid", "hui-grid-card");
   }
 }
-customElements.define("grid-stack-in-card", GridStackInCard);
+customElements.define("g-stack-in-card", GridStackInCard);
 
 /** 注册 customCards */
 window.customCards = window.customCards || [];
 [
-  { type: "vertical-stack-in-card", name: "Vertical Stack In Card", description: "Vertical stack without extra borders, supports styles" },
-  { type: "horizontal-stack-in-card", name: "Horizontal Stack In Card", description: "Horizontal stack without extra borders, supports styles" },
-  { type: "grid-stack-in-card", name: "Grid Stack In Card", description: "Grid stack without extra borders, supports CSS grid layouts and styles" }
+  { type: "v-stack-in-card", name: "Vertical Stack In Card", description: "Vertical stack without extra borders, supports styles" },
+  { type: "h-stack-in-card", name: "Horizontal Stack In Card", description: "Horizontal stack without extra borders, supports styles" },
+  { type: "g-stack-in-card", name: "Grid Stack In Card", description: "Grid stack without extra borders, supports CSS grid layouts and styles" }
 ].forEach(c => window.customCards.push({ ...c, preview:false, documentationURL:"https://github.com/hzonz/custom-stack-cards" }));
 
